@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <title>Blog - D'Skull</title>
+        <style>
+            .grey-700{
+            background-color: rgb(39, 36, 49);
+            }
+            .grey-800{
+                background-color: rgb(27, 24, 36);
+            }
+            .grey-900{
+                background-color: rgb(29, 28, 28);
+            }
+            .red-800{
+                color: rgb(223, 41, 41);
+            }
+            .white{
+                color: rgb(215, 218, 221);
+            }
+            .img-box200{
+                width: 200px;
+                height: 200px;
+            }
+            .coral{
+                color: coral;
+            }
+            .blue{
+                color: blueviolet;
+            }
+            .green{
+                color: darkcyan;
+            }
+            
+        </style>
+    </head>
+<body class="grey-800 text-white">
+    <div class="sticky-top">
+        <nav class="navbar border-bottom border-light grey-900">
+            <div class="container-sm">
+                <a class="navbar-brand fw-bold text-white" href="index.html">
+                    <img src="assets/img/brand.png" alt="" width="30" height="30" class="d-inline-block rounded align-text-top">
+                    D'SKULL
+                </a>
+                <div class="d-flex">
+                    <a class="nav-link text-reset opacity-75 fw-bold" href="index.html"><h5>Home</h5></a>
+                    <a class="nav-link text-reset opacity-75 fw-bold" href="about.html"><h5>About</h5></a>
+                    <a class="nav-link text-reset opacity-75 fw-bold" aria-current="page" href="blog.html"><h5 class="red-800 fw-bold">Blog</h5></a>
+                    <a class="nav-link text-reset opacity-75 fw-bold" href="contact.html"><h5>Contact</h5></a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid grey-800" style="padding-bottom: 0.5rem; padding-top: 0.5rem;">
+            <div class="container-fluid d-flex justify-content-between" style="max-width: 115ch;">
+                <h1 class="red-800 opacity-75 fw-bold">LET'S HUNT BEGIN!!!</h1>
+                <h3 class="red-800 opacity-75 fw-bold">$<span id="myWallet" value="10000">10000</span></h3>
+            </div>
+        </div>
+    </div>
+    <form onsubmit="return false">
+        <div class="container-fluid grey-700" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid d-flex justify-content-evenly" style="max-width: 125ch;">
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/R-DSkull1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 green">Rare item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DR-1" value="false" onclick="beli('499', 'DR-1')">Buy 499$</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/R-DSkull2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 green">Rare item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DR-2" value="false" onclick="beli('399', 'DR-2')">Buy 399$</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/R-DSkull3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 green">Rare item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DR-3" value="false" onclick="beli('359', 'DR-3')">Buy 359$</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid grey-800" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid d-flex justify-content-evenly" style="max-width: 125ch;">
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/E-DSkull1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 blue">Epic item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DE-1" value="false" onclick="beli('999', 'DE-1')">Buy 999$</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/E-DSkull2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 blue">Epic item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DE-2" value="false" onclick="beli('1099', 'DE-2')">Buy 1099$</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/E-DSkull3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 blue">Epic item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DE-3" value="false" onclick="beli('899', 'DE-3')">Buy 899$</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid grey-700" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid d-flex justify-content-evenly" style="max-width: 125ch;">
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/L-DSkull1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 coral">Legendary item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DL-1" value="false" onclick="beli('1499', 'DL-1')">Buy 1499$</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/L-DSkull2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 coral">Legendary item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DL-2" value="false" onclick="beli('1999', 'DL-2')">Buy 1999$</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card grey-700" style="width: 18rem; border: 1; border-color: aliceblue;">
+                    <img src="assets/img/product/M-DSkull1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title opacity-75">Faceless Demon</h5>
+                        <p class="card-text opacity-75">Don't look them in the eyes, or they'll steal your face</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item grey-700 red-800">Mythical item</li>
+                        </ul>
+                        <div class="text-end">
+                            <button class="btn btn-primary" id="DM-1" value="false" onclick="beli('6699', 'DM-1')">Buy 6699$</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000" style="border: 1; border-color: aliceblue;">
+                <div class="toast-header grey-800">
+                    <img src="assets/img/brand.png" class="rounded me-2" alt="..."  width="30" height="30">
+                    <strong class="me-auto red-800 opacity-75">Demon Skullhead</strong>
+                    <small>now</small>
+                    <button id="clsToast" type="button" class="btn-close bg-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body grey-700">
+                    <p class="white">You have owned this item</p>
+                </div>
+            </div>
+        </div>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+            <div id="liveToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000" style="border: 1; border-color: aliceblue;">
+                <div class="toast-header grey-800">
+                    <img src="assets/img/brand.png" class="rounded me-2" alt="..."  width="30" height="30">
+                    <strong class="me-auto red-800 opacity-75">Demon Skullhead</strong>
+                    <small>now</small>
+                    <button id="clsToast2" type="button" class="btn-close bg-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body grey-700">
+                    <p class="white">Insufficient wallet</p>
+                </div>
+            </div>
+        </div>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+            <div id="liveToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1500" style="border: 1; border-color: aliceblue;">
+                <div class="toast-header grey-800">
+                    <img src="assets/img/brand.png" class="rounded me-2" alt="..."  width="30" height="30">
+                    <strong class="me-auto red-800 opacity-75">Demon Skullhead</strong>
+                    <small>now</small>
+                    <button id="clsToast3" type="button" class="btn-close bg-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body grey-700">
+                    <p class="white">You got this item</p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <footer class="border-top container-fluid" style="padding-bottom: 1rem; padding-top: 2rem;">
+        <div class="d-flex justify-content-around">
+            <h4 class="fw-bold">©DEMONS SKULLHEAD</h4>
+            <a class="nav-link text-reset opacity-75 fw-bold" href="https://www.instagram.com/fwxyz_17/"><h5>@fwxyz_17</h5></a>
+        </div>
+    </footer>
+
+    <script src="bootstrap/script.js"></script>
+</body>
+</html>

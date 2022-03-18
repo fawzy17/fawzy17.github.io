@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - D'Skull</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <style>
+            .grey-700{
+            background-color: rgb(39, 36, 49);
+            }
+            .grey-800{
+                background-color: rgb(27, 24, 36);
+            }
+            .grey-900{
+                background-color: rgb(29, 28, 28);
+            }
+            .red-800{
+                color: rgb(223, 41, 41);
+            }
+            .white{
+                color: rgb(215, 218, 221);
+            }
+            .bg-white{
+                color: rgb(215, 218, 221);
+            }
+            
+        </style>
+    </head>
+<body class="grey-800 text-white">
+    <!-- Position Set for Toast -->
+    <div class="p-3" style="position: fixed; top: 0; right: 0; min-width:300px; min-height: 200px;" id="toast-container">
+    <!-- toasts -->
+    </div>
+    <nav class="navbar border-bottom border-light grey-900 sticky-top">
+        <div class="container-sm">
+          <a class="navbar-brand fw-bold text-white" href="index.html">
+              <img src="assets/img/brand.png" alt="" width="30" height="30" class="d-inline-block rounded align-text-top">
+              D'SKULL
+            </a>
+            <div class="d-flex">
+                <a class="nav-link text-reset opacity-75 fw-bold" href="index.html"><h5>Home</h5></a>
+                <a class="nav-link text-reset opacity-75 fw-bold" href="about.html"><h5>About</h5></a>
+                <a class="nav-link text-reset opacity-75 fw-bold" href="blog.html"><h5>Blog</h5></a>
+                <a class="nav-link text-reset opacity-75 fw-bold" aria-current="page" href="contact.html"><h5 class="red-800 fw-bold">Contact</h5></a>
+            </div>
+        </div>
+    </nav>
+    <form method="get">
+        <div class="container-fluid grey-700" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid" style="max-width: 125ch;">
+                <h1 class="red-800 opacity-75 fw-bold">DEMONS SKULLHEAD CONTACT</h1>
+            </div>
+        </div>
+        <div class="container-fluid grey-800" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid" style="max-width: 125ch;">
+                <div class="mb-3">
+                    <label for="IEmail" class="form-label opacity-75">Email address</label>
+                    <input type="email" class="form-control" id="IEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid grey-700" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid" style="max-width: 125ch;">
+                <div class="mb-3">
+                    <label for="IProblem" class="form-label opacity-75">Problem</label>
+                    <input type="text" class="form-control" id="IProblem" aria-describedby="problem" placeholder="What's your problem?">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid grey-800" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid" style="max-width: 125ch;">
+                <div class="mb-3">
+                    <label for="Message" class="form-label opacity-75">Message</label>
+                    <textarea type="text" class="form-control" id="Message" placeholder="Enter your Message here!"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid grey-700" style="padding-bottom: 2rem; padding-top: 2rem;">
+            <div class="container-fluid d-flex justify-content-between" style="max-width: 125ch;">
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="Check1">
+                    <label class="form-check-label opacity-75" for="Check1">I agree to the terms and conditions</label>
+                </div>
+                <button type="button" class="btn btn-primary" id="liveToastBtn">Send Message</button>
+
+                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000" style="border: 1; border-color: aliceblue;">
+                        <div class="toast-header grey-800">
+                            <img src="assets/img/brand.png" class="rounded me-2" alt="..."  width="30" height="30">
+                            <strong class="me-auto red-800 opacity-75">Demon Skullhead</strong>
+                            <small>now</small>
+                            <button id="clsToast" type="button" class="btn-close bg-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body grey-700">
+                            <p class="white">Your message has received, please wait for our service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <footer class="border-top container-fluid" style="padding-bottom: 1rem; padding-top: 2rem;">
+        <div class="d-flex justify-content-around">
+            <h4 class="fw-bold">©DEMONS SKULLHEAD</h4>
+            <a class="nav-link text-reset opacity-75 fw-bold" href="https://www.instagram.com/fwxyz_17/"><h5>@fwxyz_17</h5></a>
+        </div>
+    </footer>
+    <script src="bootstrap/script.js">
+
+    </script>
+</body>
+</html>
